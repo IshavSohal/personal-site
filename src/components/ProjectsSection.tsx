@@ -4,27 +4,54 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    name: "Bitly Clone",
-    tagline: "Distributed URL shortener built for scale",
-    tech: ["Docker", "Redis", "Cassandra", "Java", "Spring Boot"],
+    name: "Bitly",
+    tagline: "Distributed URL shortener with 1000 req/s throughput",
+    tech: ["Docker", "Redis", "Cassandra", "Python", "Flask"],
     highlights: [
-      "Designed a horizontally scalable architecture with consistent hashing",
-      "Implemented caching layer with Redis for sub-millisecond redirects",
-      "Built fault-tolerant storage with Apache Cassandra",
+      "Built with Docker Swarm, Cassandra, and Redis for high-throughput URL shortening",
+      "Deployed Redis primary–replica architecture as LRU cache, reducing GET latency by 42%",
+      "3-node Cassandra cluster (RF=2) for persistent, fault-tolerant storage",
+      "Writer–Logger stack using Redis streams reduced perceived write latency by 37%",
     ],
     gradient: "from-primary to-secondary",
     github: "#",
   },
   {
-    name: "r/Place Clone",
-    tagline: "Real-time collaborative pixel canvas",
-    tech: ["AWS", "Redis", "WebSockets", "React", "Node.js"],
+    name: "r/Place",
+    tagline: "Real-time collaborative pixel canvas on AWS",
+    tech: ["AWS", "Redis", "Python", "WebSockets", "DynamoDB"],
     highlights: [
-      "Supports thousands of concurrent users placing pixels in real time",
-      "WebSocket-based architecture with Redis pub/sub for instant updates",
-      "Deployed on AWS with auto-scaling and load balancing",
+      "WebSocket API Gateway for real-time connections, disconnections, and board updates",
+      "NAT gateway enabling private Lambda functions with secure outbound access",
+      "SQS decoupling improved DynamoDB write throughput by 29%",
+      "ElastiCache for latest board state and active user tracking",
     ],
     gradient: "from-secondary to-primary",
+    github: "#",
+  },
+  {
+    name: "CUDA Laplacian Filter",
+    tagline: "GPU-accelerated image processing with CUDA & C++",
+    tech: ["CUDA", "C++", "POSIX Threads"],
+    highlights: [
+      "CUDA-based Laplacian filter with shared memory and coalesced access — 25× speedup over CPU",
+      "Optimized CPU baseline with POSIX threads, row-level parallelism, and barrier synchronization",
+      "Five GPU kernel variants with different workload layouts; best achieved 10%+ higher throughput",
+    ],
+    gradient: "from-accent to-secondary",
+    github: "#",
+  },
+  {
+    name: "CNN Plays GeoGuessr",
+    tagline: "Deep learning model predicting locations from Street View imagery",
+    tech: ["Python", "PyTorch", "Pandas", "NumPy", "sklearn"],
+    highlights: [
+      "EVA-02 backbone (ImageNet-22k) for global photo geolocation from Street View images",
+      "Two-stage architecture with classification + continent-conditioned regression, reducing large errors by 64%",
+      "Joint loss combining cross-entropy and cosine-similarity angular loss",
+      "90.6% continent accuracy and 762 km mean error after 40 epochs",
+    ],
+    gradient: "from-primary to-accent",
     github: "#",
   },
   {
@@ -48,7 +75,7 @@ const projects = [
       "Calculates carbon impact from transportation, diet, and energy usage",
       "Social features to compete and collaborate with friends",
     ],
-    gradient: "from-primary to-accent",
+    gradient: "from-secondary to-accent",
     github: "#",
   },
 ];
@@ -61,7 +88,7 @@ const ProjectsSection = () => {
           Projects
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.name}
