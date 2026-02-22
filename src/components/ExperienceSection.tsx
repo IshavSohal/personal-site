@@ -21,14 +21,14 @@ const ExperienceSection = () => {
               <p className="text-sm font-medium text-primary">
                 Environment and Climate Change Canada
               </p>
-              <p className="text-sm text-muted-foreground">May 2024 – Aug 2024</p>
+              <p className="text-sm text-muted-foreground">May 2024 – August 2025</p>
             </div>
             <ul className="space-y-2 mt-4">
               {[
-                "Developed and maintained internal web applications using Java, Spring Boot, and React",
-                "Built RESTful APIs and integrated with PostgreSQL databases for climate data pipelines",
-                "Improved CI/CD workflows and automated testing, reducing deployment times by 40%",
-                "Collaborated with cross-functional teams in an Agile environment using Jira and Git",
+                "Built an Equipment Reservation Platform using React, Express, and Prisma — 44% decline in erroneous reservations",
+                "Designed Shared Asset System to prevent file duplication, resulting in 30% decrease in product size",
+                "Built Admin Upload Component for secure zipped product uploads, saving 2+ hours/month",
+                "Conducted major refactor of Vue & TypeScript codebase, migrating to Pinia stores for faster performance and fewer bugs",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
@@ -50,11 +50,11 @@ const ExperienceSection = () => {
               <p className="text-sm font-medium text-accent">
                 University of Toronto
               </p>
-              <p className="text-sm text-muted-foreground">Sep 2022 – Expected Apr 2026</p>
+              <p className="text-sm text-muted-foreground">Sep 2020 – Expected Apr 2026</p>
             </div>
             <ul className="space-y-2 mt-4">
               {[
-                "GPA: 3.44 / 4.0 — Dean's List Scholar",
+                "GPA: 3.65 / 4.0 — Dean's List Scholar (2021–2024)",
                 "Relevant coursework: Data Structures & Algorithms, Operating Systems, Databases, Software Engineering",
                 "Active hackathon participant — DeerHacks, Hack Canada, GenAI Genesis",
               ].map((item, i) => (
