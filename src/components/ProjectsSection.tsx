@@ -1,6 +1,4 @@
-import { Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
 const projects = [
   {
@@ -14,7 +12,6 @@ const projects = [
       "Developed a LinkedHashMap-based LRU cache with TTL eviction in the proxy, reducing GET latency from 7.80 ms to 2.33 ms per request (70% lower)",
     ],
     gradient: "from-primary to-secondary",
-    github: "#",
   },
   {
     name: "r/Place",
@@ -28,7 +25,6 @@ const projects = [
       "Utilized ElastiCache to store the latest board state and track active users",
     ],
     gradient: "from-secondary to-primary",
-    github: "#",
   },
   {
     name: "Bitly (Docker)",
@@ -41,7 +37,6 @@ const projects = [
       "Implemented Writer-Logger stack using Redis streams to decouple request handling from persistence, reducing perceived write latency by 37%",
     ],
     gradient: "from-primary to-secondary",
-    github: "#",
   },
   {
     name: "Zoomer",
@@ -55,7 +50,6 @@ const projects = [
       "Containerized and tested the backend in Docker, with gateway-level integration tests for success/failure responses",
     ],
     gradient: "from-secondary to-accent",
-    github: "#",
   },
   {
     name: "CUDA Laplacian Image Filtering",
@@ -67,7 +61,6 @@ const projects = [
       "Implemented five GPU kernel variants with different workload layouts (e.g., row-major vs. column-major), the top-performing kernel achieved 10%+ higher throughput",
     ],
     gradient: "from-accent to-secondary",
-    github: "#",
   },
   {
     name: "CNN Plays Geoguessr",
@@ -80,7 +73,6 @@ const projects = [
       "Trained model over 40 epochs using Adam, achieving 90.6% continent accuracy and 251 km median error",
     ],
     gradient: "from-primary to-accent",
-    github: "#",
   },
   {
     name: "CascadeAI (GenAI Genesis 2026)",
@@ -92,7 +84,6 @@ const projects = [
       "Built Leaflet-based geospatial UI with GeoJSON/PDF export, enabling city search, local-area analysis, and visual exploration of cascading risk flows",
     ],
     gradient: "from-accent to-primary",
-    github: "#",
   },
   {
     name: "Six Degrees of Kevin Bacon",
@@ -105,7 +96,6 @@ const projects = [
       "Dockerized application and wrote API tests for success and failure cases",
     ],
     gradient: "from-primary to-secondary",
-    github: "#",
   },
   {
     name: "PriceHawk",
@@ -117,7 +107,6 @@ const projects = [
       "Implemented Google SSO sign-in for improved user convenience",
     ],
     gradient: "from-primary to-accent",
-    github: "#",
   },
   {
     name: "FaceVote (DeerHacks 2023)",
@@ -129,7 +118,6 @@ const projects = [
       "Developed live voting results dashboard using Chakra UI and Chart.js with sub-second update latency",
     ],
     gradient: "from-accent to-primary",
-    github: "#",
   },
   {
     name: "CarbonTrack",
@@ -141,9 +129,51 @@ const projects = [
       "Implemented Recommendation Feature, providing users with recommendations based on consumption habits",
     ],
     gradient: "from-secondary to-accent",
-    github: "#",
   },
 ];
+
+const techBadgeColors = {
+  languages: "gradient-bg",
+  technologies: "gradient-accent-bg",
+  systems: "bg-gradient-to-r from-secondary to-cyan-500",
+  storage: "bg-gradient-to-r from-emerald-500 to-teal-600",
+};
+
+const languageTech = new Set(["Java", "SQL", "Python", "C/C++", "C++", "JavaScript", "TypeScript", "HTML/CSS"]);
+const frameworkTech = new Set([
+  "React.js",
+  "React",
+  "React Native",
+  "Express",
+  "Flask",
+  "Node.js",
+  "Vue.js",
+  "Pinia",
+  "Prisma",
+  "npm",
+  ".NET",
+  "PyTorch",
+  "Scikit-Learn",
+  "sklearn",
+  "Pandas",
+  "NumPy",
+  "CUDA",
+  "Django",
+  "Maven",
+  "IBM watsonx",
+  "Vite",
+  "Leaflet",
+]);
+const systemsTech = new Set(["Linux", "Git", "Bash", "AWS", "Docker", "Postman", "iOS"]);
+const storageTech = new Set(["SQLite", "PostgreSQL", "Cassandra", "Redis", "DynamoDB", "MongoDB", "Neo4j"]);
+
+const getTechBadgeColor = (tech: string) => {
+  if (languageTech.has(tech)) return techBadgeColors.languages;
+  if (storageTech.has(tech)) return techBadgeColors.storage;
+  if (systemsTech.has(tech)) return techBadgeColors.systems;
+  if (frameworkTech.has(tech)) return techBadgeColors.technologies;
+  return techBadgeColors.technologies;
+};
 
 const ProjectsSection = () => {
   return (
@@ -162,31 +192,19 @@ const ProjectsSection = () => {
               {/* Top gradient accent bar */}
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${project.gradient}`} />
 
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="font-display text-xl font-bold text-foreground mb-1">
-                    {project.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{project.tagline}</p>
-                </div>
-                <Button
-                  asChild
-                  size="icon"
-                  variant="ghost"
-                  className="opacity-60 group-hover:opacity-100 transition-opacity"
-                >
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.name} on GitHub`}>
-                    <Github className="h-5 w-5" />
-                  </a>
-                </Button>
+              <div className="mb-4">
+                <h3 className="font-display text-xl font-bold text-foreground mb-1">
+                  {project.name}
+                </h3>
+                <p className="text-sm text-muted-foreground">{project.tagline}</p>
               </div>
 
               <div className="flex flex-wrap gap-1.5 mb-5">
                 {project.tech.map((t) => (
                   <Badge
                     key={t}
-                    variant="secondary"
-                    className="text-xs font-medium"
+                    variant="outline"
+                    className={`${getTechBadgeColor(t)} border-0 text-xs font-medium text-primary-foreground hover:opacity-90`}
                   >
                     {t}
                   </Badge>
