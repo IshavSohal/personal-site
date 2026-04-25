@@ -3,7 +3,7 @@ import { Briefcase, GraduationCap } from "lucide-react";
 const ExperienceSection = () => {
   return (
     <>
-      <section id="experience" className="pt-16 pb-12">
+      <section id="experience" className="scroll-mt-16 pt-16 pb-12">
         <div className="section-container">
           <h2 className="font-display text-4xl sm:text-5xl font-bold mb-14 gradient-text">
             Experience
@@ -42,7 +42,7 @@ const ExperienceSection = () => {
         </div>
       </section>
 
-      <section id="education" className="pt-12 pb-16">
+      <section id="education" className="scroll-mt-16 pt-12 pb-16">
         <div className="section-container">
           <h2 className="font-display text-4xl sm:text-5xl font-bold mb-14 gradient-text">
             Education

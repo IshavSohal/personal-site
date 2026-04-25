@@ -69,7 +69,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="pt-16 pb-24">
+    <section id="contact" className="scroll-mt-16 pt-16 pb-24">
       <div className="section-container text-center">
         <h2 className="font-display text-4xl sm:text-5xl font-bold mb-6 gradient-accent-text">
           Let's Connect
