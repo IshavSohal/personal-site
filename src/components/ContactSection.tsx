@@ -172,7 +172,7 @@ const ContactSection = () => {
         </div>
 
         <p className="mt-16 text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Ishav Sohal. Built with ❤️
+          © {new Date().getFullYear()} Ishav Sohal
         </p>
       </div>
     </section>

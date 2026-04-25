@@ -3,22 +3,22 @@ import { Badge } from "@/components/ui/badge";
 const skillCategories = [
   {
     name: "Languages",
-    skills: ["Java", "Python", "C/C++", "JavaScript", "TypeScript", "SQL", "HTML/CSS", "Bash"],
+    skills: ["Java", "SQL", "Python", "C/C++", "JavaScript", "TypeScript", "HTML/CSS"],
     color: "gradient-bg",
   },
   {
     name: "Technologies & Frameworks",
-    skills: ["CUDA", "PyTorch", "Scikit-Learn", "Pandas", "NumPy", "Vue.js", "React", "Flask", "Node.js", ".NET"],
+    skills: ["React.js", "Express", "Flask", "Node.js", "Vue.js", "Pinia", "Prisma", "npm", ".NET", "PyTorch", "Scikit-Learn", "Pandas", "NumPy", "CUDA"],
     color: "gradient-accent-bg",
   },
   {
-    name: "Cloud & DevOps",
-    skills: ["AWS", "Lambda", "DynamoDB", "ElastiCache", "Docker", "Cassandra", "Redis", "Postman"],
+    name: "Systems/DevOps",
+    skills: ["Linux", "Git", "Bash", "AWS", "Docker", "Postman"],
     color: "gradient-bg",
   },
   {
-    name: "Developer Tools",
-    skills: ["Git", "GitHub", "Linux", "Bash", "Figma", "Trello"],
+    name: "Databases/Storage",
+    skills: ["SQLite", "PostgreSQL", "Cassandra", "Redis", "DynamoDB", "MongoDB", "Neo4j"],
     color: "gradient-accent-bg",
   },
 ];
