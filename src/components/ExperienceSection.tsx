@@ -3,7 +3,7 @@ import { Briefcase, GraduationCap } from "lucide-react";
 const ExperienceSection = () => {
   return (
     <>
-      <section id="experience" className="pt-24 pb-12">
+      <section id="experience" className="pt-16 pb-12">
         <div className="section-container">
           <h2 className="font-display text-4xl sm:text-5xl font-bold mb-14 gradient-text">
             Experience
@@ -42,13 +42,13 @@ const ExperienceSection = () => {
         </div>
       </section>
 
-      <section id="education" className="pt-12 pb-24">
+      <section id="education" className="pt-12 pb-16">
         <div className="section-container">
           <h2 className="font-display text-4xl sm:text-5xl font-bold mb-14 gradient-text">
             Education
           </h2>
 
-          <div className="max-w-3xl">
+          <div className="max-w-6xl">
             {/* Education */}
             <div className="relative pl-8 border-l-2 border-accent/30">
               <div className="absolute -left-[17px] top-0 w-8 h-8 rounded-full gradient-accent-bg flex items-center justify-center">
@@ -63,16 +63,37 @@ const ExperienceSection = () => {
                 </p>
                 <p className="text-sm text-muted-foreground">Sep 2020 – Expected Apr 2026</p>
               </div>
-              <ul className="space-y-2 mt-4">
-                {[
-                  "GPA: 3.65 / 4.0 — Dean's List Scholar (2021–2024)",
-                  "Relevant coursework: Parallel Programming, Scalable Computing, Neural Networks and Deep Learning, Introduction to Databases, Introduction to Information Security, Principles of Computer Networks, Introduction to AI, Operating Systems, Introduction to Software Engineering, Software Tools and Systems Programming, Algorithm Design and Analysis",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+              <ul className="space-y-4 mt-4">
+                <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                  GPA: 3.65 / 4.0 — Dean's List Scholar (2021–2024)
+                </li>
+                <li className="space-y-2 text-sm text-muted-foreground">
+                  <div className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                    {item}
-                  </li>
-                ))}
+                    Relevant coursework:
+                  </div>
+                  <ul className="grid gap-x-8 gap-y-2 pl-3 sm:grid-cols-[repeat(3,minmax(max-content,1fr))]">
+                    {[
+                      "Parallel Programming",
+                      "Scalable Computing",
+                      "Neural Networks and Deep Learning",
+                      "Introduction to Databases",
+                      "Introduction to Information Security",
+                      "Principles of Computer Networks",
+                      "Introduction to AI",
+                      "Operating Systems",
+                      "Introduction to Software Engineering",
+                      "Software Tools and Systems Programming",
+                      "Algorithm Design and Analysis",
+                    ].map((course) => (
+                      <li key={course} className="flex items-start gap-2 whitespace-nowrap">
+                        <span className="text-accent shrink-0">-</span>
+                        {course}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>

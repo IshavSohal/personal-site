@@ -14,18 +14,18 @@ const skillCategories = [
   {
     name: "Systems/DevOps",
     skills: ["Linux", "Git", "Bash", "AWS", "Docker", "Postman"],
-    color: "gradient-bg",
+    color: "bg-gradient-to-r from-secondary to-cyan-500",
   },
   {
     name: "Databases/Storage",
     skills: ["SQLite", "PostgreSQL", "Cassandra", "Redis", "DynamoDB", "MongoDB", "Neo4j"],
-    color: "gradient-accent-bg",
+    color: "bg-gradient-to-r from-emerald-500 to-teal-600",
   },
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="pt-24 pb-16">
       <div className="section-container">
         <h2 className="font-display text-4xl sm:text-5xl font-bold mb-6 gradient-text">
           About Me

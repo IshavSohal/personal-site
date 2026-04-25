@@ -147,7 +147,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="pt-24 pb-16">
       <div className="section-container">
         <h2 className="font-display text-4xl sm:text-5xl font-bold mb-14 gradient-accent-text">
           Projects

@@ -39,7 +39,7 @@ const HeroSection = () => {
             </a>
           </Button>
           <Button asChild size="icon" variant="outline" className="rounded-full h-12 w-12 hover:gradient-accent-bg hover:text-accent-foreground hover:border-transparent transition-all">
-            <a href="mailto:ishav.sohal@mail.utoronto.ca" aria-label="Email">
+            <a href="mailto:ishavsohal1@gmail.com" aria-label="Email">
               <Mail className="h-5 w-5" />
             </a>
           </Button>
