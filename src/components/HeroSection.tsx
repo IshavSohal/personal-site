@@ -34,7 +34,7 @@ const HeroSection = () => {
             </a>
           </Button>
           <Button asChild size="icon" variant="outline" className="rounded-full h-12 w-12 hover:gradient-bg hover:text-primary-foreground hover:border-transparent transition-all">
-            <a href="https://linkedin.com/in/ishavsohal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/ishav-sohal-a7173325b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
             </a>
           </Button>

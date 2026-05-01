@@ -158,7 +158,7 @@ const ContactSection = () => {
             </a>
           </Button>
           <Button asChild variant="outline" className="rounded-full px-8 h-12 text-base font-semibold">
-            <a href="https://linkedin.com/in/ishavsohal" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/ishav-sohal-a7173325b/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5 mr-2" />
               LinkedIn
             </a>
