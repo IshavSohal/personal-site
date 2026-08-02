@@ -8,7 +8,7 @@ const skillCategories = [
   },
   {
     name: "Technologies & Frameworks",
-    skills: ["React.js", "Express", "Flask", "Node.js", "Vue.js", "Pinia", "Prisma", "npm", ".NET", "PyTorch", "Scikit-Learn", "Pandas", "NumPy", "CUDA"],
+    skills: ["React.js", "Express", "Flask", "Node.js", "Vue.js", "Pinia", "Prisma", "npm", ".NET", "LangGraph", "PyTorch", "Scikit-Learn", "Pandas", "NumPy", "CUDA"],
     color: "gradient-accent-bg",
   },
   {

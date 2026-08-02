@@ -11,32 +11,61 @@ const ExperienceSection = () => {
 
           <div className="max-w-3xl">
             {/* Work */}
-            <div className="relative pl-8 border-l-2 border-primary/30">
-              <div className="absolute -left-[17px] top-0 w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
-                <Briefcase className="h-4 w-4 text-primary-foreground" />
+            <div className="relative pl-8 border-l-2 border-primary/30 space-y-12">
+              <div className="relative">
+                <div className="absolute -left-[49px] top-0 w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
+                  <Briefcase className="h-4 w-4 text-primary-foreground" />
+                </div>
+                <div className="mb-2">
+                  <h3 className="font-display text-xl font-bold text-foreground">
+                    AI Solutions Engineer
+                  </h3>
+                  <p className="text-sm font-medium text-primary">
+                    FGF Brands
+                  </p>
+                  <p className="text-sm text-muted-foreground">May 2026 – Present · North York, ON</p>
+                </div>
+                <ul className="space-y-2 mt-4">
+                  {[
+                    "Integrated mem0-backed cross-session memory for LangGraph agents using PostgreSQL vector storage and middleware-based semantic retrieval, enabling recall of relevant user and workflow context",
+                    "Developed a multi-user agent thread-sharing system with role-based access control, owner-managed invitations, query locking, and Server-Sent Events for real-time collaborative sessions",
+                    "Integrated a Costco POS MCP server with a LangGraph agent for secure remote POS-data retrieval",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="mb-2">
-                <h3 className="font-display text-xl font-bold text-foreground">
-                  Software Developer
-                </h3>
-                <p className="text-sm font-medium text-primary">
-                  Environment and Climate Change Canada
-                </p>
-                <p className="text-sm text-muted-foreground">May 2024 – August 2025</p>
+
+              <div className="relative">
+                <div className="absolute -left-[49px] top-0 w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
+                  <Briefcase className="h-4 w-4 text-primary-foreground" />
+                </div>
+                <div className="mb-2">
+                  <h3 className="font-display text-xl font-bold text-foreground">
+                    Software Developer
+                  </h3>
+                  <p className="text-sm font-medium text-primary">
+                    Environment and Climate Change Canada
+                  </p>
+                  <p className="text-sm text-muted-foreground">May 2024 – August 2025</p>
+                </div>
+                <ul className="space-y-2 mt-4">
+                  {[
+                    "Built an Equipment Reservation Platform using React, Express, and Prisma, improving data consistency, reducing erroneous reservations by 44%, and saving 3+ hours of manual work per month",
+                    "Designed Shared Asset System to prevent duplication of asset files, resulting in 30% decrease in product size",
+                    "Developed .NET REST endpoints to manage cached datasets, including cache validation and regeneration workflows, reducing dataset retrieval latency by 40%",
+                    "Built Admin Upload Component to securely process zipped product uploads, saving 2+ hours per month",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-2 mt-4">
-                {[
-                  "Built an Equipment Reservation Platform using React, Express, and Prisma, improving data consistency, reducing erroneous reservations by 44%, and saving 3+ hours of manual work per month",
-                  "Designed Shared Asset System to prevent duplication of asset files, resulting in 30% decrease in product size",
-                  "Developed .NET REST endpoints to manage cached datasets, including cache validation and regeneration workflows, reducing dataset retrieval latency by 40%",
-                  "Built Admin Upload Component to securely process zipped product uploads, saving 2+ hours per month",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
