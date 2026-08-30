@@ -150,20 +150,20 @@ const ContactSection = () => {
           </form>
         </Form>
 
-        <div className="flex items-center justify-center gap-4">
-          <Button asChild className="gradient-bg text-primary-foreground rounded-full px-8 h-12 text-base font-semibold hover:opacity-90 transition-opacity">
+        <div className="mx-auto flex w-full max-w-sm flex-col items-stretch justify-center gap-4 sm:max-w-none sm:flex-row sm:items-center">
+          <Button asChild className="h-12 w-full rounded-full px-8 text-base font-semibold gradient-bg text-primary-foreground hover:opacity-90 transition-opacity sm:w-auto">
             <a href="mailto:ishavsohal1@gmail.com">
               <Mail className="h-5 w-5 mr-2" />
               Email Me
             </a>
           </Button>
-          <Button asChild variant="outline" className="rounded-full px-8 h-12 text-base font-semibold">
+          <Button asChild variant="outline" className="h-12 w-full rounded-full px-8 text-base font-semibold sm:w-auto">
             <a href="https://www.linkedin.com/in/ishav-sohal-a7173325b/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5 mr-2" />
               LinkedIn
             </a>
           </Button>
-          <Button asChild variant="outline" className="rounded-full px-8 h-12 text-base font-semibold">
+          <Button asChild variant="outline" className="h-12 w-full rounded-full px-8 text-base font-semibold sm:w-auto">
             <a href="https://github.com/ishavsohal" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5 mr-2" />
               GitHub

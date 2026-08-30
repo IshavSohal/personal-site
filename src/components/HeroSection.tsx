@@ -19,12 +19,12 @@ const HeroSection = () => {
           Ishav Sohal
         </h1>
         <p className="font-display text-xl sm:text-2xl font-semibold text-muted-foreground mb-8 animate-fade-in [animation-delay:0.2s]">
-          Full-Stack Developer · Systems Thinker · Builder
+          AI Solutions Engineer · Backend &amp; Full-Stack Developer
         </p>
         <p className="max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground leading-relaxed mb-10 animate-fade-in [animation-delay:0.3s]">
-          Computer Science student at the University of Toronto with a passion for building
-          scalable, reliable systems. I love hackathons, distributed computing, and turning
-          ambitious ideas into production-ready software.
+          Recent University of Toronto CS graduate building AI-powered applications and the
+          infrastructure behind them at FGF Brands. I'm especially interested in backend systems,
+          AI agents, and turning technically ambitious ideas into reliable production software.
         </p>
 
         <div className="flex items-center justify-center gap-4 animate-fade-in [animation-delay:0.4s]">
